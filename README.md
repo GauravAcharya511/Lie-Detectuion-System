@@ -1,21 +1,11 @@
-# This code has been superseded
-# Please use our new [PulseSensor Playground Library](https://github.com/WorldFamousElectronics/PulseSensorPlayground)
 
 
-![logo](https://avatars0.githubusercontent.com/u/7002937?v=3&s=200)
-
-## Getting Advanced Code / <a href="http://www.pulsesensor.com">PulseSensor</a>  & <a href="http://arduino.cc/"> "Arduino"</a> 
+## Getting Advanced Code
 * Blinks LED on Pin 13 to a User's Live Heartbeat.   
 * "Fancy Fade Blink" an LED on Pin 5, to a User's Live HeartBeat.
 * Calculates User's BPM, Beat-Per-Minute. 
 * Calculates User's IBI, the Interval Between Beats.  
 * Serial.print's the Signal, BPM, and IBI.  Use this output for our <a href="https://github.com/WorldFamousElectronics/PulseSensor_Amped_Processing_Visualizer">Processing Visualizer App</a> , our <a href="https://itunes.apple.com/us/app/pulse-sensor/id974284569?ls=1&mt=12"> Pulse Sensor Mac App</a>, or your project!  
-* Tech Note:  Employ's Arduino's Interrupt, to keep "time", and calculate BPM and IBI.
-
-
-## Screen Shot
-![ScreenShot](pics/ScreenCapArduino.png) 
-
 
 ## Installing
 1. Click the `Clone or Download` button above and download the zip, or if you are a github user, clone this repo, or fork it! 
@@ -73,7 +63,7 @@ Now, when you run the Serial Plotter, you will see a **blue** pulse waveform onl
 
 ![plot pulse only](pics/plot-of-pulse-only.png)
 
-## Timer Interrupt Notes or "Why did some of PWM Pins stop working ???"
+
 There is a tab in the Arduino code called `Timer_Interrupt_Notes`. This page describes how to set up the timed interrupt depending on which hardware you are using, and what other things you may want to do with your sketch. We are using a hardware timer on the micrcontroller to make sure that our Pulse Sensor samples are taken at a consistent rate. That makes our data extra scientific! Please read it carefully!
 
 PWM on pins 3 and 11 will not work when using this code, because we are using Timer 2!
@@ -84,18 +74,3 @@ Interrupt Setting | Disables PWM ON Arduino PINS
 TIMER2            |  3 AND 11  
 
 
-
-
-## Pulse Sensor Preparation [ Garbage In ~ Garbage Out ]
-It's important to protect the Pulse Sensor from the oils and sweat that your fingertips and earlobes and other body parts make. That stuff can adversely affect the signal quality. Also, it's important to protect **you** from the electricity that makes the Pulse Sensor work! To this end, we have provided clear vinyl stickers that fit perfectly on the face of the Pulse Sensor. Peel one off, and press it firmly on the **front** side of your Pulse Sensor.
-![Stick](pics/stick.jpg)
-![Picture](pics/finger.jpg)
-![Picture](pics/earclip.jpg)
-
-## Troubleshooting
-Having trouble making heads or tails of what is wrong?  
-Check your raw signal with this project:
-<a href="https://github.com/WorldFamousElectronics/PulseSensorStarterProject">WorldFamousElectronics/PulseSensorStarterProject</a> 
-
-
-[![Alt text](https://github.com/WorldFamousElectronics/PulseSensorStarterProject/blob/master/video-play.png)](https://youtu.be/RbB8NSRa5X4)
